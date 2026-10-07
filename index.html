@@ -1,0 +1,191 @@
+html
+
+<!DOCTYPE html>
+
+<html lang="en" class="scroll-smooth">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sparkle Clean Co. | Professional House Cleaning Services</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+
+                    colors: {
+
+                        brand: {
+
+                            50: '#f0fdfa',
+
+                            100: '#ccfbf1',
+
+                            500: '#14b8a6',
+
+                            600: '#0d9488',
+
+                            700: '#0f766e',
+
+                            800: '#115e59',
+
+                            900: '#134e4a',
+
+                        },
+
+                        navy: {
+
+                            800: '#1e293b',
+
+                            900: '#0f172a',
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+    <style>
+
+        .glass-card {
+
+            background: rgba(255, 255, 255, 0.95);
+
+            backdrop-filter: blur(10px);
+
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+
+            width: 6px;
+
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+
+            background: #f1f1f1;
+
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+
+            background: #cbd5e1;
+
+            border-radius: 4px;
+
+        }
+
+    </style>
+
+</head>
+
+<body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
+
+
+    <!-- Navigation -->
+
+    <header class="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-sm">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+            <a href="#" class="flex items-center gap-2 text-2xl font-black text-slate-900 tracking-tight">
+
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-teal-400 flex items-center justify-center text-white shadow-lg shadow-brand-500/30">
+
+                    <i class="fa-solid fa-sparkles text-lg"></i>
+
+                </div>
+
+                <span>Sparkle<span class="text-brand-600">Clean</span></span>
+
+            </a>
+
+
+            <!-- Desktop Nav -->
+
+            <nav class="hidden md:flex items-center gap-8 font-medium text-slate-600">
+
+                <a href="#calculator" class="hover:text-brand-600 transition">Price Calculator</a>
+
+                <a href="#checklist" class="hover:text-brand-600 transition">Checklist</a>
+
+                <a href="#reviews" class="hover:text-brand-600 transition">Reviews</a>
+
+                <a href="#faq" class="hover:text-brand-600 transition">FAQ</a>
+
+            </nav>
+
+
+            <div class="hidden md:flex items-center gap-3">
+
+                <button onclick="openAdminModal()" class="text-xs font-semibold px-3 py-2 text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 rounded-lg transition">
+
+                    <i class="fa-solid fa-lock mr-1"></i> Owner Portal
+
+                </button>
+
+                <a href="#booking" class="bg-brand-600 hover:bg-brand-700 text-white font-semibold px-5 py-2.5 rounded-xl shadow-md shadow-brand-600/20 hover:shadow-lg transition">
+
+                    Book Now
+
+                </a>
+
+            </div>
+
+
+            <!-- Mobile Hamburger -->
+
+            <button onclick="toggleMobileMenu()" class="md:hidden text-2xl text-slate-700 p-2">
+
+                <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- Mobile Menu -->
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3">
+
+            <a href="#calculator" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Price Calculator</a>
+
+            <a href="#checklist" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Checklist</a>
+
+            <a href="#reviews" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">Reviews</a>
+
+            <a href="#faq" onclick="toggleMobileMenu()" class="block py-2 text-slate-700 font-medium">FAQ</a>
+
+            <div class="pt-4 border-t border-slate-100 flex flex-col gap-2">
+
+                <button onclick="toggleMobileMenu(); openAdminModal()" class="w-full text-center py-2 text-sm text-slate-600 bg-slate-100 rounded-xl font-medium">
+
+                    Owner Admin Dashboard
+
+                </button>
+
+                <a href="#booking" onclick="toggleMobileMenu()" class="block w-full text-center py-3 text-white bg-brand-600 rounded-xl font-semibold shadow-md">
+
+                  
+
